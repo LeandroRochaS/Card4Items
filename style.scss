@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+:root {
+  --color-primary: hsl(229, 6%, 66%);
+  --color-secondary: hsl(234, 12%, 34%);
+  --color-text: hsl(0, 0%, 98%);
+
+  --card-cyan: #4ad0cf;
+  --card-orange: #f4af58;
+  --card-blue: #619add;
+  --card-red: #e0595b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  max-width: 1200px;
+  background-color: rgba(247, 247, 247, 0.8);
+}
+
+header {
+  text-align: center;
+  padding-top: 40px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  margin-top: 60px;
+  margin-bottom: 50px;
+}
+
+header {
+  text-align: center;
+}
+
+header h2 {
+  font-size: 34px;
+  font-weight: 200;
+  color: var(--color-primary);
+}
+
+header h1 {
+  font-size: 34px;
+  font-weight: 600;
+  color: var(--color-secondary);
+}
+
+header p {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 20px;
+  color: var(--color-primary);
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.card {
+  max-width: 450px;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 7px;
+  padding: 30px;
+  text-align: right;
+  min-height: 300px;
+  max-height: 300px;
+  height: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.infos {
+  text-align: left;
+  padding-bottom: 50px;
+
+  h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: var(--color-secondary);
+  }
+
+  p {
+    font-size: 0.9rem;
+    color: var(--color-primary);
+  }
+}
+
+.icon {
+  display: flex;
+  justify-content: flex-end;
+
+  img {
+    max-width: 70px;
+    width: 100%;
+  }
+}
+
+.card1 {
+  border-top: 3px solid var(--card-cyan);
+}
+
+.card2 {
+  border-top: 3px solid var(--card-red);
+}
+
+.card3 {
+  border-top: 3px solid var(--card-orange);
+}
+
+.card4 {
+  border-top: 3px solid var(--card-blue);
+}
+
+.card1,
+.card4 {
+  align-self: center;
+}
+
+@media (max-width: 1000px) {
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    text-align: center;
+    width: 90%;
+  }
+}
